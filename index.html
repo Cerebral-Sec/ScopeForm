@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cerebral Security OÜ - Penetration Test Scoping Form</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<link rel="stylesheet" id="cerebral-googlefont-css" href="http://fonts.googleapis.com/css?family=Poppins%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i&amp;display=swap&amp;ver=5.3.4" type="text/css" media="all">
+
+	<link rel="icon" href="https://cerebralsec.com/favicon.png" sizes="32x32">
+	<link rel="icon" href="https://cerebralsec.com/favicon.png" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="https://cerebralsec.com/favicon.png">
+	<meta name="msapplication-TileImage" content="https://cerebralsec.com/favicon.png">
+
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+	<!--Note for dev/editor-->
+	<!--Left part/side bad consists pages. Each page represent an another main part of the form-->
+	<!--On the right side form; Main form consists 3 parts. Section headers (breadcrumbs on form), form pages' holder and footer buttons-->
+	<!--Each page consists sub sections. Prev-next buttons are controlling section transition-->
+	<!--Adding a new section/page is easy. All you have to write its html properly. Set a progress in the side bar, put it's data numbers. Set its sections (if more than 1) in section header area put it's data numbers. Set a page in the form area and put it's data numbers, lastly, set section itself inside of page. -->
+	<!--Usual form validation should work but you would need to set custom mechanics, as example, phone number validation-->
+
+
+
+</head>
+<body>
+	<div class="mainContainer">
+		<header>
+			<div class="container">
+				<a class="logo" href="https://cerebralsec.com" target="_blank">
+					<img src="img/cerebral_logo.png" >
+				</a>
+				<div>
+					<h1>PENETRATION TEST</h1>
+					<h2>Pre-engagement <br>Scoping Form</h2>
+					<a id="goToForm" href="javascript:;">Fill In</a>
+				</div>
+			</div>
+		</header>
+		<div class="form">
+			<div class="container">
+				<h3>Please fill in this questionnaire and submit at your earliest convenience. Please note that if you are not sure <br>what question
+might mean, just arrow a question mark in the end for further explanations.<br><br>Data entered on this page does not get sent to any external servers - all functionality of the web page will work locally on your browser</h3>
+
+				<div class="formGroup">
+					<div class="bigOBgContainer"><div class="bigOBg"> </div></div>
+					<div class="progressBg"> </div>
+
+					<div class="formItself">
+						<div class="formHead">
+							<div class="headerSection" data-header="1">
+								<a href="javascript:;" data-headerButton="1" class="active">Company</a>
+								<a href="javascript:;" data-headerButton="2">Primary Contact</a>
+							</div>			
+						</div>
+						<div class="formBody">
+							<div class="formPages">
+								<div class="formPage" data-page="1" data-head="1" id="formInfo">
+									<div class="formSection"  data-section="1">
+										<form>
+											<div class="inputContainer">
+												<span>Company Name <strong>*</strong></span>
+												<input type="text" name="info_company" id="info_company" placeholder="Company Name" description="Company Name"  required>
+												<div class="formExpBtn">
+													<span class="formExpBtnQuest">?</span>
+													<div class="formExpHoverController"></div>
+													<div class="formExpDiv">
+														<p>This name will be on your final report as the company name, so please put in the full legal name of the organization.</p>
+													</div>
+												</div>
+											</div>
+											<div class="inputContainer">
+												<span>Company Website </span>
+												<input type="text" name="info_website" id="info_website" placeholder="URL" description="URL">
+												<div class="formExpBtn">
+													<span class="formExpBtnQuest">?</span>
+													<div class="formExpHoverController"></div>
+													<div class="formExpDiv">
+														<p>The main website URL of your company</p>
+													</div>
+												</div>
+											</div>
+											<div class="inputContainer">
+												<span>Company Address <strong>*</strong></span>
+												<textarea name="info_address" id="info_address" placeholder="Full physical address" description="Full physical address" required></textarea>
+												<div class="formExpBtn">
+													<span class="formExpBtnQuest">?</span>
+													<div class="formExpHoverController"></div>
+													<div class="formExpDiv">
+														<p>Physical location of the department responsible with this test</p>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="formSection" data-section="2">
+										<form>
+											<div class="inputContainer">
+												<span>Name <strong>*</strong></span>
+												<input type="text" name="info_name" id="info_name" placeholder="Primary point of contact First & Last Name" description="Primary point of contact First & Last Name" required>
+												<div class="formExpBtn">
+													<span class="formExpBtnQuest">?</span>
+													<div class="formExpHoverController"></div>
+													<div class="formExpDiv">
+														<p>This person will be the only person to receive the final report, as well as receive ALL project e-mails from start to finish</p>
+													</div>
+												</div>
+											</div>
+											<div class="inputContainer">
+												<span>E-mail <strong>*</strong></span>
+												<input type="text" name="info_email" id="info_email" placeholder="Primary point of contact e-mail address" description="Primary point of contact e-mail address" required>
+												<div class="formExpBtn">
+													<span class="formExpBtnQuest">?</span>
+													<div class="formExpHoverController"></div>
+													<div class="formExpDiv">
+														<p>E-mail address of the primary point of contact for this test</p>
+													</div>
+												</div>
+											</div>
+											<div class="inputContainer">
+												<span>Phone <strong>*</strong></span>
+												<input type="text" name="info_phone" id="info_phone" placeholder="Phone No." description="Phone No." required>
+												<div class="formExpBtn">
+													<span class="formExpBtnQuest">?</span>
+													<div class="formExpHoverController"></div>
+													<div class="formExpDiv">
+														<p>Phone number of the primary point of contact for this test</p>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="formPage" data-page="2" data-head="2" id="formInfo">
+									<div class="formSection" data-section="3">
+										<form>
+											<div class="inputContainer inputContainerFullWidthHeading">
+												<span>Requested date range for the test <strong>*</strong></span>
+												<input type="text" name="info_date_from" id="info_date_from" placeholder="Available from" description="Available from" required>
+												<input type="text" name="info_date_to" id="info_date_to" placeholder="Available to" description="Available to" required>
+												<div class="formExpBtn">
+													<span class="formExpBtnQuest">?</span>
+													<div class="formExpHoverController"></div>
+													<div class="formExpDiv">
+														<p>Please enter the date range for when you want the testing efforts to take place. The final date should be your deadline for the final report.</p>
+													</div>
+												</div>
+											</div>
+											<div class="inputContainer inputContainerFullWidthHeading inputContainerCheckRadio">
+												<span>What is the business requirement for this penetration test?								</span>
+
+												<div class="radioContainer">
+													<input id="standards_policy" class="typeChecks1" type="checkbox" description="Internal Decision or Policy" name="standards_requirements">
+													<label for="standards_policy" class="inputLabel">Internal decision or policy </label>
+												</div>
+												<div class="radioContainer">
+													<input id="standards_regulatory" class="typeChecks1" type="checkbox" description="Regulatory audit or Standard" name="standards_requirements">
+													<label for="standards_regulatory" class="inputLabel">Regulatory audit or standard</label>
+												</div>
+											</div>
+
+											<div class="inputContainer inputContainerFullWidthHeading inputContainerCheckRadio" id="regulator" style="display:none">
+
+												<div class="radioContainer">
+													<input id="standards_pcidss" class="typeChecks1" type="checkbox" description="PCI/DSS" name="standards_requirements">
+													<label for="standards_pcidss" class="inputLabel">PCI/DSS</label>
+												</div>
+												<div class="radioContainer">
+													<input id="standards_iso27001" class="typeChecks1" type="checkbox" description="ISO 27001" name="standards_requirements">
+													<label for="standards_iso27001" class="inputLabel">ISO 27001</label>
+												</div>
+												<div class="radioContainer">
+													<input id="standards_other" class="typeChecks1" type="checkbox" description="Other Regulation" name="standards_requirements">
+													<label for="standards_other" class="inputLabel">Other regulation</label>
+
+													<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+														<span>Please specify <strong>*</strong></span>
+														<input class="fullWidth" type="text" id="standards_other_text" name="standards_other_text" description="Other Regulation" required>
+													</div>
+												</div>
+											</div>
+											<div class="inputContainer inputContainerFullWidthHeading inputContainerCheckRadio">
+												<span>Type of Test (Select all that apply) <strong>*</strong></span>
+												<div class="radioContainer">
+													<input id="type_external" class="typeChecks1" type="checkbox" description="External Network Pentest" name="type_of_test" required>
+													<label for="type_external" class="inputLabel">External Network Penetration Test</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>The External Network pentest covers the underlying server infrastructure for a website (or other target), and not the applications themselves that work on the server. It's a test for the network layer, simulating what an attacker can do to the target's external network perimeter. So for instance, if it was a payment gateway running on an Apache server behind a Firewall, the External Network Pentest would test the firewall and the Apache Server, and not touch the website contents. If we want to test the website (web application) itself, then that would be a Web Application pentest. If we want to test both, it would be an External Network Pentest + Web Application Pentest. Targets for this type of test would be External IP addresses (ex: 207.154.195.119)</p>
+														</div>
+													</div>
+													<div class="inputContainer inputContainerFullWidthHeading inputContainerCheckRadio inputContainerSub blackBoxShowHide">
+															<div class="inputContainer">
+																<div class="inputContainer inputContainerFullWidthHeading inputContainerFullWidth">
+																	<span class="inputContainerSubHeading">Please specify number of Live Hosts that will be tested <strong>*</strong></span>
+																	<input type="text" placeholder="Number" description="External Network Pentest Hosts Number" id="external_scope_targets_number" name="external_scope_targets_number" required>
+																</div>
+																<div class="inputContainer inputContainerFullWidthHeading inputContainerFullWidth inputContainerSubStyle">
+																	<span class="inputContainerSubHeading">Please specify targets or ranges to be included in the test. <strong>*</strong><br>(Targets can be IP addresses, subnets, URLs, programs, hostnames or specific ports) </span>
+																	<textarea id="external_scope_targets_range" placeholder="192.168.0.1/32, 192.168.0.20 - 192.168.0.50, 192.168.0.20:443, https://example.com/shop/*" description="External Network Pentest Scope: " name="external_scope_targets_range" required></textarea>
+																</div>
+															</div>
+													</div>
+												</div>
+												<div class="radioContainer">
+													<input id="type_internal" class="typeChecks1" type="checkbox" description="Internal Network Pentest" name="type_of_test" required>
+													<label for="type_internal" class="inputLabel">Internal Network Penetration Test</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>The Internal Network pentest is, like the External Network pentest, held on the Network layer. The approach is similar to an External Network pentest, in that it deals with IPs and services, but conducted against targets in an INTERNAL Network, which is accessed from the outside through a VPN provided to Cerebral by the client. Targets for this type of test can be Internal IP addresses (ex:192.168.10.10) or Internal IP address ranges (Ex:10.10.10.1/24)</p>
+														</div>
+													</div>
+													<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+														<span class="inputContainerSubHeading">Please total number of hosts <strong>*</strong></span>
+														<input type="text" placeholder="Number" description="Internal Network Hosts Number" class="marginT-05" id="internal_network_host_number" name="internal_network_host_number" required>
+													</div>
+													
+													<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth inputContainerSubStyle">
+														<span class="inputContainerSubHeading">Please specify targets or ranges to be included in the test. <strong>*</strong><br>(Targets can be IP addresses, subnets,hostnames or specific ports) </span>
+														<textarea id="internal_scope_targets_range" placeholder="192.168.0.1/32, 192.168.0.20 - 192.168.0.50, 192.168.0.20:443" description="Internal Network Pentest Scope" name="internal_scope_targets_range" required></textarea>
+													</div>
+
+													<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+														<span class="inputContainerSubHeading">Is Active Directory or similar in place? </span>
+														<div class="radioContainer">
+															<input id="type_internal_ad" class="typeChecks2" type="checkbox" description="Active Directory" name="internal_ad" >
+															<label for="type_internal_ad" class="inputLabel">Yes</label>
+														</div>
+													</div>
+
+
+
+												</div>
+												<div class="radioContainer">
+													<input id="type_web" class="typeChecks1" type="checkbox" description="Web Application Pentest" name="type_of_test" required>
+													<label for="type_web" class="inputLabel">Web Application Penetration Test</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Web Application pentests are focused directly on Web Application structures that reside on web servers. Testing is conducted on the Application Layer, and the test deals with targets like Wordpress, APIs, JavaScript & PHP applications and so on. Targets for this type of test would look like https://www.example.com, https://www.example.com/payment/cards/*, http://192.168.10.20/users/*, and so on</p>
+														</div>
+													</div>
+													
+													<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth inputContainerSubStyle">
+														<span class="inputContainerSubHeading">What technologies are used for the web service	</span>
+														<textarea id="web_tech" placeholder="IIS, Wordpress, PHP, Drupal" description="Web Technologies" name="web_tech" required></textarea>
+													</div>
+
+													<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth inputContainerSubStyle">
+														<span class="inputContainerSubHeading">Hosted Enviroment	</span>
+														<textarea id="web_env" placeholder="AWS, Azure, Local, Custom DC" description="Hosted Enviroment" name="web_env" required></textarea>
+													</div> 
+													<div class="inputContainer inputContainerFullWidthHeading inputContainerCheckRadio inputContainerSub blackBoxShowHide">
+														
+														
+														<div class="radioContainer inputContainerFullWidth" >
+															<input id="type_web_has_access" class="typeChecks2" type="checkbox" description="Is Scope Restricted From the Internet" name="type_web_has_has_access">
+															<label for="type_web_has_access" class="inputLabel">Is the access to application restricted from the Internet?</label>
+															
+															<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+															
+
+																<span class="inputContainerSubHeading">What will be provided to access? <strong>*</strong></span>
+																<input type="text" placeholder="VPN, IP Whitelist, Remote Desktop" description="What will be provided to access" class="marginT-05" id="web_access_type" name="web_access_type" style="width:500px" >
+																
+															</div>
+														</div>
+														
+														<div class="radioContainer inputContainerFullWidth" >
+															<input id="type_web_user_role" class="typeChecks2" type="checkbox" description="Will authenticated testing be required" name="type_web_has_user_role">
+															<label for="type_web_user_role" class="inputLabel">Will authenticated testing be required?</label>
+															
+															<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+															
+
+																<span class="inputContainerSubHeading">Please enter User Role Count <strong>*</strong></span>
+																<input type="text" placeholder="Number" description="User Role Count" class="marginT-05" id="web_user_role" name="web_user_role" required>
+																<div class="formExpBtn">
+																	<span class="formExpBtnQuest">?</span>
+																	<div class="formExpHoverController"></div>
+																	<div class="formExpDiv">
+																		<p>Please enter User Role Count</p>
+																	</div>
+																</div>
+																
+															</div>
+														</div>
+														
+
+														<div class="radioContainer inputContainerFullWidth" style="padding-top: 1vw;">
+															<input id="type_web_api" class="typeChecks2" type="checkbox" description="Application Has API" name="type_web_api">
+															<label for="type_web_api" class="inputLabel">Web Application includes API</label>
+															
+															<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+																<span class="inputContainerSubHeading">Please enter the number of API endpoints <strong>*</strong></span>
+																<input type="text" placeholder="Number" description="Web API Endpoint Count" class="marginT-05" id="api_targets_number" name="api_targets_number" required>
+																<div class="formExpBtn">
+																	<span class="formExpBtnQuest">?</span>
+																	<div class="formExpHoverController"></div>
+																	<div class="formExpDiv">
+																		<p>Please enter the number of endpoints included in your API, or in case of multiple APIs, the collective total number. This allows us to assess how large the API attack surface is going to be for this engagement, without having to ask for any sensitive information before an agreement. API endpoints are each part of an API that has an individual address and performs one particular function. (Example: "/api/cards/makePayment"  or /api/user/sendMoney" could each be different endpoints of an API)</p>
+																	</div>
+																</div>
+																
+															</div>
+														</div>
+														
+														
+													</div>
+												</div>
+
+												<div class="radioContainer">
+													<input id="type_mobile" class="typeChecks1" type="checkbox" description="Mobile Application Pentest" name="type_of_test" required>
+													<label for="type_mobile" class="inputLabel">Mobile Application Penetration Test</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Mobile application pentests are conducted against mobile application packages like APKs and IPAs. Clients send Cerebral's pentest team a compiled copy of the latest version of the application package they have available. Targets for this type of test would be APK or IPA files.</p>
+														</div>
+													</div>
+													<div class="inputContainer inputContainerFullWidthHeading inputContainerCheckRadio inputContainerSub">
+														<div class="radioContainer inputContainerFullWidthHeading inputContainerFullWidth">
+															<input id="type_mobile_apk" class="typeChecks2" type="checkbox" description="Application has APK" name="type_mobile_apk">
+															<label for="type_mobile_apk" class="inputLabel">APK (Android)</label>
+															<div class="radioContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+
+																
+																<span>Backed Server Address <strong>*</strong></span>
+																<div class="inputContainer">												
+																	<input type="text" placeholder="Server Address, 192.168.1.1/api" description="Adroid Backed Server" class="marginT-05" id="mobile_backed_server" name="mobile_backed_server" required>
+
+																</div>
+
+																<span>Additional technologies in use (select all that apply) <strong>*</strong></span>
+																<div class="radioContainer">
+																	<input id="type_mobile_apk_defense_none" class="typeChecks2" type="checkbox" description="Additional Technology" name="type_mobile_apk_defense" required>
+																	<label for="type_mobile_apk_defense_none" class="inputLabel">None</label>
+																</div>
+																<div class="radioContainer">
+																	<input id="type_mobile_apk_defense_java" class="typeChecks2" type="checkbox" description="Java" name="type_mobile_apk_defense" required>
+																	<label for="type_mobile_apk_defense_java" class="inputLabel">Java</label>
+																</div>
+																<div class="radioContainer">
+																	<input id="type_mobile_apk_defense_kotlin" class="typeChecks2" type="checkbox" description="Kotlin" name="type_mobile_apk_defense" required>
+																	<label for="type_mobile_apk_defense_kotlin" class="inputLabel">Kotlin</label>
+																</div>
+																<div class="radioContainer">
+																	<input id="type_mobile_apk_defense_Webview" class="typeChecks2" type="checkbox" description="Webview" name="type_mobile_apk_defense" required>
+																	<label for="type_mobile_apk_defense_Webview" class="inputLabel">Webview</label>
+																</div>
+																<div class="radioContainer">
+																	<input id="type_mobile_apk_defense_xamarin" class="typeChecks2" type="checkbox" description="Xamarin" name="type_mobile_apk_defense" required>
+																	<label for="type_mobile_apk_defense_xamarin" class="inputLabel">Xamarin</label>
+																</div>
+															</div>
+														</div>
+													
+														<div class="radioContainer inputContainerFullWidthHeading inputContainerFullWidth">
+															<input id="type_mobile_ipa" class="typeChecks2" type="checkbox" description="Application Has IPA" name="type_mobile_ipa">
+															<label for="type_mobile_ipa" class="inputLabel">IPA (iPhone)</label>
+															<div class="radioContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+																
+																<span>Backed Server Address <strong>*</strong></span>
+																<div class="inputContainer">												
+																	<input type="text" placeholder="Server Address, 192.168.1.1/api" description="IPA Backend server" class="marginT-05" id="mobile_ios_backed_server" name="mobile_ios_backed_server" required>
+
+																</div>
+
+																<span>Additional technologies in use (select all that apply) <strong>*</strong></span>
+																<div class="radioContainer">
+																	<input id="type_mobile_ipa_defense_none" class="typeChecks2" type="checkbox" description="Additional Technology" name="type_mobile_ipa_defense" required>
+																	<label for="type_mobile_ipa_defense_none" class="inputLabel">None</label>
+																</div>
+																<div class="radioContainer">
+																	<input id="type_mobile_ipa_defense_objectivec" class="typeChecks2" type="checkbox" description="Objective C" name="type_mobile_ipa_defense" required>
+																	<label for="type_mobile_ipa_defense_objectivec" class="inputLabel">Objective C</label>
+																</div>
+																<div class="radioContainer">
+																	<input id="type_mobile_ipa_defense_webview" class="typeChecks2" type="checkbox" description="Webview" name="type_mobile_ipa_defense" required>
+																	<label for="type_mobile_ipa_defense_webview" class="inputLabel">Webview</label>
+																</div>
+																<div class="radioContainer">
+																	<input id="type_mobile_ipa_defense_xamarin" class="typeChecks2" type="checkbox" description="Xamarin" name="type_mobile_ipa_defense" required>
+																	<label for="type_mobile_ipa_defense_xamarin" class="inputLabel">Xamarin</label>
+																</div>
+																<div class="radioContainer">
+																	<input id="type_mobile_ipa_defense_swift" class="typeChecks2" type="checkbox" description="Swift" name="type_mobile_ipa_defense" required>
+																	<label for="type_mobile_ipa_defense_swift" class="inputLabel">Swift</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer">
+													<input id="type_wireless" class="typeChecks1" type="checkbox" description="Wireless Pentest" name="type_of_test" required>
+													<label for="type_wireless" class="inputLabel">Wireless Penetration Test</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Wi-Fi Network pentests deal with cracking the security protecting password-protected wireless networks on the protocol layer. The goal of the test is to break into the network as an outside attacker, without any credentials supplied, by physically capturing radio signals containing wireless data packets from the air. Due to the physical nature of this type of test, Wireless penetration tests cannot be conducted remotely, and pentester needs to be physically present in the clients target premises. Targets do not need to be specified for this type of test.</p>
+														</div>
+													</div>
+													<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+														<span class="inputContainerSubHeading">Please Enter number of Wireless Access Points <strong>*</strong></span>
+														<input type="text" placeholder="Number" description="Number" class="marginT-05" id="wireless_penetration_access_number" name="wireless_penetration_access_number" required>
+													</div>
+												</div>
+												<div class="radioContainer">
+													<input id="type_social" class="typeChecks1" type="checkbox" description="Social Engineering Pentest" name="type_of_test" required>
+													<label for="type_social" class="inputLabel">Social Engineering Test</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Social engineering tests focus on the security awareness present in a company's target personnel. Pentesters first collect information on a target company, then prepare and launch convincing phishing campaigns against each individual within the target scope of the test. By utilizing advanced phishing techniques, simulated malicious content is e-mailed to targets, to see whether any of the target personnel take the bait, however obviously none of the simulated malicious payloads actually harm or exploit their systems. Targets for this type of test would be a list of e-mail addresses that the client wants this test to be performed against.</p>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer">
+													<input id="type_cloudinfra" class="typeChecks1" type="checkbox" description="Cloud Infra Pentest" name="type_of_test" required>
+													<label for="type_cloudinfra" class="inputLabel">Cloud Infrastructure Test</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Cloud Penetration Testing is an authorised simulated cyber-attack against a system that is hosted on a Cloud provider, e.g. Amazon’s AWS or Microsoft’s Azure. The main goal of a cloud penetration test is to find the weaknesses and strengths of a system, so that its security posture can be accurately assessed. Cloud Penetration Testing involves a mixture of external and internal penetration testing techniques to examine the external posture of the organisation. Examples of vulnerabilities determined by this type of active testing can include unprotected storage blobs and S3 buckets, servers with management ports open to the internet and poor egress controls.</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="radioContainer">
+													<input id="type_segmentation" class="typeChecks1" type="checkbox" description="Segmentation Test" name="type_of_test" required>
+													<label for="type_segmentation" class="inputLabel">Network Segmentation Test</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Segmentation testing is not a penetration test in the classic definiton of the term. It is focused more on checking to see if certain parts of a network infrastructure are accessible from other parts where they're supposed by design to be unaccessible. However, the methods and knowledge used for this type of test are from the same family of network enumeration techniques used in penetration tests, and therefore segmentation testing is usually performed by penetration testers.</p> <br> <p>Segmentation testing is required by a variety of compliance standards commonly used.</p> <br> <p>To conduct testing, the client needs to provide Cerebral Sec with VPN or SSH connections into both inside and outside any senstive closed-networks for which the test is to be conducted. Access from inside the networks to the outside and from outside these connections to the inside are attempted using network enumeration methods. A separate VPN connection for each network to be tested is required.</p> <br> <p>Targets for this type of test would look like "192.168.10.1/28</p>
+														</div>
+													</div>
+												</div>
+
+											</div>
+
+											<div class="inputContainer inputContainerFullWidthHeading inputContainerCheckRadio">
+												<span>External perimeter defenses in place (select all that apply): <strong>*</strong></span>
+
+														
+														<div class="radioContainer">
+															<input id="type_external_defense_none" class="typeChecks2" type="checkbox" description="None External Defense" name="external_defense1" required>
+															<label for="type_external_defense_none" class="inputLabel">None</label>
+														</div>
+														<div class="radioContainer">
+															<input id="type_external_defense_firewall" class="typeChecks2" type="checkbox" description="Firewall" name="external_defense1" required>
+															<label for="type_external_defense_firewall" class="inputLabel">Firewall</label>
+														</div>
+														<div class="radioContainer">
+															<input id="type_external_defense_ids" class="typeChecks2" type="checkbox" description="Active IDS/IPS" name="external_defense1" required>
+															<label for="type_external_defense_ids" class="inputLabel">Active IDS/IPS</label>
+														</div>
+														<div class="radioContainer">
+															<input id="type_external_defense_loadbalancer" class="typeChecks2" type="checkbox" description="Load Balancer" name="external_defense1" required>
+															<label for="type_external_defense_loadbalancer" class="inputLabel">Load Balancer</label>
+														</div>
+														
+														<div class="radioContainer">
+															<input id="type_external_defense_waf" class="typeChecks2" type="checkbox" description="Web Application Firewall" name="external_defense1" required>
+															<label for="type_external_defense_waf" class="inputLabel">Web Application Firewall</label>
+														</div>
+														
+														<div class="radioContainer">
+															<input id="type_external_defense_siem" class="typeChecks2" type="checkbox" description="SIEM" name="external_defense1" required>
+															<label for="type_external_defense_siem" class="inputLabel">SIEM</label>
+														</div>
+														
+														<div class="radioContainer">
+															<input id="type_external_defense_endpoint" class="typeChecks2" type="checkbox" description="End-point protection solutions" name="external_defense1" required>
+															<label for="type_external_defense_endpoint" class="inputLabel">End-point protection solutions</label>
+														</div>
+														
+														<div class="radioContainer">
+															<input id="type_external_defense_fileintegrity" class="typeChecks2" type="checkbox" description="File Integrity Monitoring" name="external_defense1" required>
+															<label for="type_external_defense_fileintegrity" class="inputLabel">File integrity monitoring</label>
+														</div>
+
+
+														<div class="radioContainer">
+															<input id="type_external_defense_other" class="typeChecks2" type="checkbox" description="Other Type of Defense" name="external_defense1" required>
+															<label for="type_external_defense_other" class="inputLabel">Other</label>
+														</div>
+											</div>
+
+
+											<div class="inputContainer inputContainerFullWidthHeading inputContainerCheckRadio">
+												<span>Type of Environment (Select all that apply) <strong>*</strong></span>
+												<div class="radioContainer">
+													<input id="environment_live" class="typeChecks1" type="checkbox" description="Live Production" name="type_of_environment" required>
+													<label for="environment_live" class="inputLabel">Live Production</label>
+
+													<div class="radioContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+														<strong style="color:Red">NOTE: Certain exploitation of vulnerabilities to determine and/or prove a weakness could crash your systems/services or cause them to reboot.</strong>
+													</div>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Running a penetration test on your production environment has a sure advantage: being conducted under actual conditions of use of your website/ web application/ API/… with the last developments set up. However, since penetration testing methods can sometimes be disruptive and unexpected on the target systems, testing the production environment can in some rare cases interfere with the normal running of your business.</p><p>At Cerebral, we take many measures to make sure testing is not harsh so as to not cause such occurances, however due to the nature of penetration testing, we also like to be open in that we cannot guarantee 100% problem-free operation all of the time.</p>
+														</div>
+													</div>
+												</div>
+												
+												<div class="radioContainer">
+													<input id="environment_staging" class="typeChecks1" type="checkbox" description="Staging / Development" name="type_of_environment" required>
+													<label for="environment_staging" class="inputLabel">Staging / Development</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>To avoid any potential risks of disruption due to pentesting, it is possible to realise penetration tests in an iso-production environment, an absolutely identical environment to the production environment. Doing a penetration test on the pre-production environment is also interesting, as it is very similar to the final environment. Tests will not touch services used by your users/customers. This is particularly appropriate for critical infrastructure, for which the data or system integrity is crucial.</p>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer">
+													<input id="environment_container" class="typeChecks1" type="checkbox" description="Virtualized Container Environment" name="type_of_environment" required>
+													<label for="environment_container" class="inputLabel">Virtualized Container Environment</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Virtualized container environments are not a third alternative to Production and Staging environments as they can be present in both, but their structure is different enough to warrant letting the penetration testing team know beforehand in order to map out attack plans to the targets accordingly.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											
+											<div class="inputContainer inputContainerFullWidthHeading inputContainerCheckRadio">
+												<span>What documents and information will be available for tester?<strong>*</strong></span>
+												<div class="radioContainer">
+													<input id="document_diagram" class="typeChecks1" type="checkbox" description="Network Diagram will be provided" name="type_of_document_networkdiagram" >
+													<label for="document_diagram" class="inputLabel">Network Diagram</label>
+
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Network Diagrams are visual representations of any given network infrastructure.</p>
+														</div>
+													</div>
+												</div>
+												
+												<div class="radioContainer">
+													<input id="document_sourcode" class="typeChecks1" type="checkbox" description="Source Code will be provided" name="type_of_document_sourcode" >
+													<label for="document_sourcode" class="inputLabel">Source code</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Having access to source code of application(s) in the scope can give the pentest team increased visibility into how the applications process data that gets put in.</div>
+													</div>
+												</div>
+												
+												<div class="radioContainer">
+													<input id="document_apidocument" class="typeChecks1" type="checkbox" description="API Documentation will be provided" name="type_of_document_apidocument" >
+													<label for="document_apidocument" class="inputLabel">API Endpoint Usage Documentation (Swagger, OpenAPI, Custom</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>For the APIs in the scope, we may need some documentation that lists the target endpoints along with sample request/response pairs. Ideally something like a JSON swagger file or a collection of cURL requests etc. would be perfect. </p> <br> <p>Note that we only need this if the API targets in the scope have any endpoints / functionalities that are not fully usable over the graphical user interface of the web target in the scope. If we can call all the API functionality through the site UI, then no documentation will be needed.</p> <br> <p>While we browse through the entire functionality offered by every application in scope, if there are “invisible” endpoints of the API that are not functional over the graphical user interface of the applications, but their existence simply have to be known beforehand by a user, without the visibility offered by documentation, these may go undiscovered. We do run some discovery scans on the applications on wordlists of possible endpoints as part of the pentests, however these can only reveal “commonly found” endpoint names, and only if the APIs behave in a way that make such enumeration possible. So having documentation on hand is the best way to ensure the entire application surface gets tested sufficiently.</p></div>
+													</div>
+												</div>
+												
+												<div class="radioContainer">
+													<input id="document_previosreport" class="typeChecks1" type="checkbox" description="Previous Reports will be provided" name="type_of_document_previousreport" >
+													<label for="document_previosreport" class="inputLabel">Reports from previous testing</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Having access to reports of previous pentests (not performed by Cerebral Security) can provide extra visibility for the pentest team to better understand weaknesses of the target infrastructure or re-check vulnerabilties previously found to make sure they have been mitigated.</div>
+													</div>
+												</div>
+												
+												<div class="radioContainer">
+													<input id="document_swoftwarearch" class="typeChecks1" type="checkbox" description="Software Architecture will be provided" name="type_of_document_softwarearchitecture" >
+													<label for="document_swoftwarearch" class="inputLabel">Software architecture</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Having access to the software architecture details can help the pentest team gain further insight into the targets and how they could be exploited.</p></div>
+													</div>
+												</div>
+												
+												<div class="radioContainer">
+													<input id="document_envir" class="typeChecks1" type="checkbox" description="Tech stack will be provided" name="type_of_document_techstack" >
+													<label for="document_envir" class="inputLabel">Tech stack information (Development tools and frameworks)</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>Having access to the list of technologies used in the targets can help the pentest team save time in enumerations and avoid some false positives.</p></div>
+													</div>
+												</div>
+
+
+											</div>
+											
+											
+											<div class="inputContainer inputContainerFullWidthHeading inputContainerCheckRadio">
+												<span>Type of Payment Systems (Select all that apply) <strong>*</strong></span>
+												<div class="radioContainer">
+													<input id="payment_none" class="typeChecks1" type="checkbox" description="No Payment Feature" name="payment" required>
+													<label for="payment_none" class="inputLabel">None</label>
+													
+												</div>
+												<div class="radioContainer">
+													<input id="payment_creditcard" class="typeChecks1" type="checkbox" description="Credit Card Feature" name="payment" required>
+													<label for="payment_creditcard" class="inputLabel">Credit Card</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>If the target scope has any payment functionalities to be tested that accept Credit Cards, the client is advised to provide Cerebral's pentest team a minimum of one "dummy" credit card to be used for testing of these payment functions. Dummy credit cards are special credit cards defined in the system by the developers for testing purposes, where any transaction performed using information of these cards simulates an actual transaction going through, without any real financial actions taking place. As certain security bypass techniques can require payment requests to be repeated many times, or edited to test certain attack vectors such as injections, it is important to make sure the pentest team can do so without worrying about generating actual money transfers during testing.</p>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer">
+													<input id="payment_crypto" class="typeChecks1" type="checkbox" description="Cryptocurrency Feature" name="payment" required>
+													<label for="payment_crypto" class="inputLabel">Cryptocurrency</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>If the target scope has any payment functionalities to be tested that accept crpytocurrency, the client is advised to provide Cerebral's pentest team a minimum of one "dummy" cryptocurrency wallet to be used for testing of these payment functions. Dummy cryptocurrency wallets are special digital wallets defined in the system by the developers for testing purposes, where any transaction performed using information of these wallets simulates an actual transaction going through, without any real financial actions taking place. As certain security bypass techniques can require payment requests to be repeated many times, or edited to test certain attack vectors such as injections, it is important to make sure the pentest team can do so without worrying about generating actual cryptocurrency transfers during testing.</p>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer">
+													<input id="payment_paypal" class="typeChecks1" type="checkbox" description="Paypal Feature" name="payment" required>
+													<label for="payment_paypal" class="inputLabel">PayPal</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>If the target scope has any payment functionalities to be tested that accepts payments from PayPal, the client is advised to provide Cerebral's pentest team a minimum of one "dummy" PayPal account to be used for testing of these payment functions. Dummy accounts are special accounts defined in the system by the developers for testing purposes, where any transaction performed using information of these accounts simulates an actual transaction going through, without any real financial actions taking place. As certain security bypass techniques can require payment requests to be repeated many times, or edited to test certain attack vectors such as injections, it is important to make sure the pentest team can do so without worrying about generating actual money transfers during testing.</p>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer">
+													<input id="payment_other" class="typeChecks1" type="checkbox" description="Other Payment Options" name="payment" required>
+													<label for="payment_other" class="inputLabel">Other</label>
+													<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+														<span>Please specify <strong>*</strong></span>
+														<input class="fullWidth" type="text" id="payment_other_text" name="payment_other_text" description="Payment Type" required>
+													</div>
+												</div>
+												
+											</div>
+											<div class="inputContainer inputContainerFullWidthHeading inputContainerCheckRadio">
+												<span>Types of Access Provided (Select all that apply) <strong>*</strong></span>
+												<div class="radioContainer">
+													<input id="access_none" class="typeChecks1" type="checkbox" description="None Access Provided" name="type_of_access" required>
+													<label for="access_none" class="inputLabel">None</label>
+												</div>
+												<div class="radioContainer  ">
+													<input id="access_vpn" class="typeChecks1" type="checkbox" description="VPN connection" name="type_of_access" required>
+													<label for="access_vpn" class="inputLabel">VPN connection</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>For Internal Network penetration tests, it is essential that the pentest team is provided access into every target segment of an internal network via a VPN connection provided by the customer. The connection needs to be placed in a location on the network where the pentester's connection can reach all of the target machines within the tests scope. VPN connections are also required to carry out Segmentation testing. VPNs should provide access to both inside the CDE (Cardholder Data Environment), and outside the CDE, so that access can be checked from both ends. If the CDE spans multiple subnets that are segmented from each other, a VPN connection will be needed for each segment.</p>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer  ">
+													<input id="access_whitelisting" class="typeChecks1" type="checkbox" description="IP whitelisting" name="type_of_access" required>
+													<label for="access_whitelisting" class="inputLabel">IP Whitelisting</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>For tests where the rules of engagement do NOT specify a Black Box pentest, it may be necessary to whitelist Cerebral's testing IP addresses in the customers external perimeter configuration. During Grey Box and especially White Box tests, connections getting dropped by defenses elongate the testing process considerably. If IP whitelisting is marked, the pentest team will get in touch with the client after this form is returned to relay IP addresses to whitelist for their test.</p>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer  ">
+													<input id="access_ssh" class="typeChecks1" type="checkbox" description="SSH Connection" name="type_of_access" required>
+													<label for="access_ssh" class="inputLabel">SSH connection</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>SSH is not ideal for Internal Network pentests or segmentation tests as a replacement for VPN connections, but in certain situations it may be the only chance to provide access. Please bear in mind this introduces some major complications to the testing process, and will result in the testing process being elongated by changing margins, resulting in your project becoming longer to deliver, and the pricing quoted accordingly.</p>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer  ">
+													<input id="access_domainuser" class="typeChecks1" type="checkbox" description="Domain User" name="type_of_access" required>
+													<label for="access_domainuser" class="inputLabel">Domain User</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>For Grey or White Box Internal Network Pentests taking place in an Active Directory environment, testing requires that the customer provide the pentest team at least one valid Active Director user to be used for interacting with the domain environment. The account provided is recommended to be of similar privileges as a low-level user in the customers organization, for example a new employee in the organization, or someone else with the bare minimum access rights to be able to interact with the AD, but without elevated privileges, to see what can and cannot be accessed from this starting position. Users provided should be in the domain users group.</p>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer ">
+													<input id="access_websiteuser" class="typeChecks1" type="checkbox" description="Web Application User" name="type_of_access" required>
+													<label for="access_websiteuser" class="inputLabel">Web Application User</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>For Grey or White Box Web Application Penetration Tests, if the testing team are for whatever reason unable by design to create their own testing accounts to use for pentesting, it is required for the customer to supply valid testing accounts. When providing accounts for web applications, it is important that the testing team is provided TWO accounts of each USER ROLE that exists in the target applications design. So for instance, for a web application where there are the user levels of: "customer", "merchant", and "moderator", two of each of these user roles, totaling a number of at least 6 accounts would be needed. This is so that testing can uncover not only vertical permission bypasses (bypassing of functionality usage restrictions between account types), but also horizontal bypasses (a malicious user performing actions relegated to another user of the same user type). If testers can register their own accounts during the test for each of the user roles that exist, customer does not need to provide any accounts.</p>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer  ">
+													<input id="access_containeruser" class="typeChecks1" type="checkbox" description="Container User" name="type_of_access" required>
+													<label for="access_containeruser" class="inputLabel">Container User</label>
+													<div class="formExpBtn">
+														<span class="formExpBtnQuest">?</span>
+														<div class="formExpHoverController"></div>
+														<div class="formExpDiv">
+															<p>For Grey or White Box Network Penetration Tests, sometimes virtualized container systems will also have their own account management systems. Examples of these would be Docker accounts or Kubernetes accounts. These do not exist within web applications, but within the container environment itself. For testing of malicious usage of accounts within the container environment, testers will need to be supplied a minimum of ONE user for the container environment, to see what information can be gathered without permission from these infrastructures using the account provided.</p>
+														</div>
+													</div>
+												</div>
+												<div class="radioContainer">
+													<input id="access_other" class="typeChecks1" type="checkbox" description="Other Type of Access" name="type_of_access" required>
+													<label for="access_other" class="inputLabel">Other</label>
+													<div class="inputContainer inputContainerSub inputContainerFullWidthHeading inputContainerFullWidth">
+														<span>Please specify <strong>*</strong></span>
+														<input class="fullWidth" type="text" id="access_other_text" name="access_other_text" required>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="formPage" data-page="3" data-head="3" id="formInfo">
+									<div class="formSection" data-section="4">
+										<form>
+											<div class="inputContainer">
+												
+												<div class="inputContainer inputContainerFullWidthHeading inputContainerFullWidth inputContainerSubStyle">
+													<span class="inputContainerSubHeading">If you have anything to add regarding scope </span>
+													<textarea id="scope_targets_range" placeholder="" description="Additional Scope" name="scope_targets_range2"></textarea>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="formPage" data-page="4" data-head="4" id="formInfo">
+									<div class="formSection" data-section="5">
+										<form>
+											<div class="inputContainer inputContainerFullWidthHeading inputContainerFullWidth">
+												<span>Non-Targets / Out-of-Scope</span>
+												<textarea id="scope_non_targets_range" placeholder="http://example.com/criticial/*, http://example.com/shop/payment/*" description="Out-of Scope" name="scope_non_targets_range"  description="Non-Targets / Out-of-Scope" ></textarea>
+												<div class="formExpBtn">
+													<span class="formExpBtnQuest">?</span>
+													<div class="formExpHoverController"></div>
+													<div class="formExpDiv">
+														<p>Please specify items to be excluded from the test. If you specified whole subnets or target ranges with wildcards, you can specify areas here that will be excluded from the scope indicated on the previous input field specifying in-scope items.</p>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="formPage" data-page="5" data-head="5" id="formInfo">
+									<div class="formSection" data-section="6">
+										<form>
+											<div class="inputContainer inputContainerFullWidthHeading inputContainerFullWidth">
+												<span>Specific Concerns & Notes</span>
+												<textarea id="scope_notes" name="scope_notes" description="Specific Concerns & Notes"></textarea>
+												<div class="formExpBtn">
+													<span class="formExpBtnQuest">?</span>
+													<div class="formExpHoverController"></div>
+													<div class="formExpDiv">
+														<p>Please list specific concerns you may have regarding any aspects of the test, details of importance, and any other notes you may have for the pentest team that you feel they should pay particular attention to.</p>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="formButtons">
+								<div class="formNextPrev">
+									<a class="formBtn formPrevBtn" href="javascript:;">Previous</a>
+									<a class="formBtn formNextBtn" class="formBtn" href="javascript:;">Next</a>
+								</div>
+								<div class="formFinish">
+									<a class="formBtn formPrevBtn" href="javascript:;">Previous</a>
+									<a class="formBtn formFinishBtn active" onclick="getFields()" class="formBtn" href="javascript:;">Finish</a>
+									<br>
+									<br>
+									<div class="formWarning" style="display:none">
+									<strong style="color:Red">Please download the generated text file and send it to us in a secure manner by following your company's security policy.</p><p>Please don't change the file content before sending it </p></strong>
+									
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="formProgress">
+						
+						<div class="progress active" id="progress-information" data-progress="1">
+							<span>Tell us about you</span>
+							<div class="progressCheck">&nbsp;</div>
+						</div>
+						<div class="progress" id="progress-projectInformation" data-progress="2">
+							<span>Tell us about your <br>project</span>
+							<div class="progressCheck">&nbsp;</div>
+						</div>
+						<div class="progress" id="progress-targetsInScope" data-progress="3">
+							<span>Additional Scope <br>Notes</span>
+							<div class="progressCheck">&nbsp;</div>
+						</div>
+						<div class="progress" id="progress-nonTargets" data-progress="4">
+							<span>Non-targets / <br>Out of scope</span>
+							<div class="progressCheck">&nbsp;</div>
+						</div>
+						<div class="progress" id="progress-concerns" data-progress="5">
+							<span>Any concerns & <br>notes</span>
+							<div class="progressCheck">&nbsp;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			
+		</footer>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-validation.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,712 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+	font-family: "Poppins", arial, sans-serif;
+}
+
+
+/*Header*/
+header {
+	display: table;
+	width: 100%;
+	
+	height: 90vh;
+	background: url(../img/bannerImg.png) 3.13vw 10vw no-repeat;
+	background-size: 55%;
+	background-color: #f4f5f9;
+	color: #35578e;
+}
+
+header .logo {
+	position: absolute; left: 5%; top: 2vw;
+}
+
+header h1 {
+	font-weight: 300;
+	font-size: 1.75vw;
+	margin-bottom: 17.5%;
+	letter-spacing: -1px;
+}
+
+header h2 {
+	font-weight: 600;
+	font-size: 3.25vw;
+	line-height: 1.2;
+	margin-bottom: 12.5%;
+	letter-spacing: -1px;
+}
+
+header .container div a {
+	background: #8fa2c0;
+	border-radius: 8px;
+	display: inline-block;
+	padding: 12px 60px;
+	text-align: center;
+	font-size: 22px;
+	text-decoration: none;
+	color: #fff;
+	transition: color 0.2s ease-out;
+}
+
+header a:hover {
+	color: #dedede;
+}
+
+header .container {
+	display: table;
+	width: 100%;
+	height: 100%;
+	/*max-width: 1500px;*/
+	margin: 0 auto;
+	position: relative;
+}
+
+header .container > div {
+	float: right;
+	text-align: center;
+	position: absolute;
+	top: 22%;
+	right: 5%;
+}
+/*Header*/
+
+
+/*Content*/
+.form {
+	background-color: #d8e3f1;
+	min-height: 940px;
+}
+
+.form .container {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	height: 100%;
+}
+
+
+.form h3 {
+	text-align: center;
+	font-size: 18px;
+	color: #8ea1c0;
+	text-shadow: 0px 0px 1px rgba(0,0,0,0.30);
+	padding-bottom: 100px;
+}
+
+.formGroup {
+	padding: 0 5%;
+	min-height: 90vh;
+	position: relative;
+	display: table;
+	width: 100%;
+	
+}
+
+.progressBg, .bigOBgContainer {
+	position: absolute;
+	top: 0; 
+	bottom: 0;
+	left: 0;
+	width: 33vw;
+	background-color: #bbccdf;
+	border-bottom-right-radius: 50px;
+	border-top-right-radius: 50px;
+	min-height: 620px;
+}
+
+.bigOBgContainer {
+	overflow: hidden;
+	left: auto;
+	right: 0;
+	background-color: transparent;
+}
+
+.bigOBg {
+	margin-right: -15vw;
+	float: right;
+	background-color: #d8e3f1;
+	border: 8vw solid #c7d9ed;
+	border-radius: 100%;
+	width: 45vw;
+	height: 43vw;
+}
+
+.formProgress {
+	position: absolute;
+	top: 12vh;
+	left: 0;
+	width: 33vw;
+	max-height: 90vh;
+	padding-left: 5%;
+	margin-left: 0.3vw;
+	
+
+}
+
+.formProgress .progress {
+	position: relative;
+	float: left;
+	width: 100%;
+	font-size: 1.6vw;
+	padding-top: 3.21%;
+	padding-bottom: 3.21%;
+	color: #fff;
+	font-weight: 500;
+	min-height: 13vh;
+	cursor: pointer;
+
+}
+
+
+
+.formProgress .progress span {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+.progressCheck {
+	position: absolute;
+	right: 0; 
+	top: 50%;
+	transform: translateY(-50%);
+	width: 5vw;
+	height: 5vw;
+	border: 0.7vw solid #5597d5;
+	min-width: 65px; min-height: 65px;
+	border-radius: 100%;
+
+	transition: background 0.25s ease-in, transform 0.25s ease-out;
+
+}
+
+.formProgress .progress:not(.active)::hover .progressCheck{
+	transform: translateY(-50%) scale(1.1);
+}
+
+.formProgress .progress.active .progressCheck {
+	background-color: #fff;
+	transform: translateY(-50%);
+}
+
+.formProgress .progress.currentProgress .progressCheck {
+	transform: translateY(-50%) scale(1.1);
+}
+
+
+.formItself {
+	min-height: 80vh;
+	width: 69.25vw;
+	float: right;
+	margin: 5vh 0;
+	position: relative;
+	background-color: #fff;
+	-webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.4);
+	box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.4);
+}
+
+
+.formHead {
+	width: 100%; 
+	float: left;
+	text-align: center;
+	padding: 30px;
+}
+
+.formHead a { 
+	display: inline-block; 
+	padding: 1vw 2vw;
+	border: 2px transparent;
+	color: #c1c1c1;
+	text-decoration: none;
+	margin-left: 1vw;
+	border-radius: 0.75vw;
+	font-weight: 700;
+	font-size: 1.2vw;
+}
+
+.formHead a.active {
+	border: 2px solid #ccc;
+	color: #737373;
+}
+
+.formHead a:first-child {
+	margin-left: 0;
+} 
+
+.formBody {
+	float: left;
+	width: 100%;
+	padding: 8.66vh 5.7% 8.2vh 9.82%;
+}
+
+.formSection, .formPage {
+	display: none;
+}
+
+.formSection:first-child, .formPage:first-child {
+	display: block;
+}
+
+
+.inputContainer {
+	margin-bottom: 4.4vh;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+.inputContainer > span {
+	line-height: 6vh;
+	width: 13.5vw;
+	float: left;
+	font-weight: 600;
+	font-size: 1vw;
+	color:#c2c2c1;
+}
+
+.radioContainer > span {
+	line-height: 6vh;
+	width: 100%;
+	float: left;
+	font-weight: 600;
+	font-size: 1vw;
+	color:#c2c2c1;
+}
+
+.inputContainerText > span {
+	font-size: inherit;
+	line-height: inherit;
+	color: #716b6f;
+}
+
+.inputContainerFullWidth {
+	width: 100% !important;
+}
+
+.inputContainerFullWidthHeading > span {
+	width: 100%;
+	font-size: 1.2vw;
+}
+
+
+
+.inputContainer > span strong { 
+	color: #172e77;
+}
+
+.inputContainer > input[type="text"], 
+.inputContainer > textarea,
+.inputContainer > input[type="number"]
+ {
+	height: 6vh;
+	float: left;
+	width: 68%;
+	border: 1px solid #b7b7b7;
+	font-size: 1vw;
+	padding: 1vw;
+	color: #716b6f;
+	-webkit-appearance: none; 
+}
+
+
+
+.inputContainer > textarea {
+	height: 12vh;
+	max-width: 68%;
+	min-height: 12vh;
+}
+
+.inputContainerFullWidthHeading > input[type="text"], 
+.inputContainerFullWidthHeading > .inputContainer > textarea,
+.inputContainerFullWidthHeading > input[type="number"] {
+	width: 30%;
+	float: left;
+	margin-left: 1.2vw;
+	-webkit-appearance: none; 
+}
+
+.inputContainerFullWidthHeading > input[type="text"]:first-of-type, 
+.inputContainerFullWidthHeading > .inputContainer > textarea:first-of-type,
+.inputContainerFullWidthHeading > input[type="number"]:first-of-type {
+	margin-left: 0;
+}
+
+
+::-webkit-input-placeholder { /* Edge */
+  color: #c2c2c1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #c2c2c1;
+}
+
+::placeholder {
+  color: #c2c2c1;
+}
+
+.inputContainer > input[type="text"]:focus, 
+.inputContainer > textarea:focus,
+.inputContainer > input[type="number"]:focus {
+	border: 1px solid #b7b7b7;
+	border-radius: 0;
+	outline: 0;
+}
+
+.formExpBtn {
+	float: right;
+	width: 6vh;
+	height: 6vh;
+	border: 1px solid #b7b7b7;
+	border-radius: 100%;
+	position: relative;
+}
+
+.formExpBtnQuest {
+	width: 100%;
+	line-height: 6vh;
+	text-align: center;
+	display: block;
+	color:#b7b7b7;
+	font-size: 1.2vw;
+}
+
+.formExpBtn:hover {
+	-webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.4);
+	box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.15);
+}
+
+.formExpDiv {
+	position: absolute;
+	bottom: 130%;
+	padding-bottom: 40%;
+	right: 0;
+	width: 20vw;
+	max-width: 450px;
+	min-width: 350px;
+	border: 1px solid #b7b7b7;
+	background: #fff;
+	padding: 1.5vw 1vw; 
+	border-radius: 8px;
+	-webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.4);
+	box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.15);
+	display: none;
+	
+}
+
+
+.formExpHoverController {
+	width: 22.5vw;
+	max-width: 450px;
+	min-width: 350px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: none;
+}
+
+
+.formExpBtn:hover .formExpDiv, 
+.formExpBtn:hover .formExpHoverController {
+	display: block;
+}
+
+.formExpDiv p {
+	line-height: 1.2;
+}
+
+.formButtons {
+	width: 100%; 
+	float: left;
+	text-align: center;
+	margin-top: 2vw;
+}
+
+.formBtn {
+	padding: 1vw 2vw;
+	border: 2px solid #173372;
+	color: #c1c1c1;
+	text-decoration: none;
+	border-radius: 0.75vw;
+	font-weight: 700;
+	font-size: 1.2vw;
+	color: #173372;
+	transition: background 0.4s ease-out, color 0.3s ease-out;
+	display: inline-block;
+
+}
+
+.formBtn:hover {
+	opacity: 0.9;
+}
+
+.formButtons > div {
+	float: right;
+}
+
+.formButtons .formBtn {
+	margin-left: 1vw;
+}
+
+.formBtn.active {
+	color: #fff;
+	background: #173372;
+
+}
+
+label.error {
+	position: absolute;
+	top: 120%;
+	left: 13.5vw;
+	font-weight: 700;
+	color: red;
+}
+.inputContainerFullWidthHeading label.error {
+	left: 0;
+	
+}
+.inputContainerCheckRadio label.error {
+	bottom: -10%;
+	top: auto;
+	left: 0;
+}
+
+input[type="text"].error, textarea.error, input[type="number"].error {
+	border-color: red !important;
+}
+
+input[type="checkbox"].error, 
+input[type="radio"].error {
+
+	-webkit-appearance: none;
+   	-moz-appearance:    none;
+   	appearance:         none;
+   	border: solid 1px red;
+  	margin-right: 8px;
+  	position: relative;
+  	border-radius: 50%;
+  	background: #fff !important;
+}
+
+input[type="checkbox"].error {
+	border-radius: 1%;
+}
+
+.formSectionPartHeader {
+	display: inline-block; 
+	padding: 0 1vw 1vw 0;
+	border-bottom: 2px solid #ccc;
+	color: #737373;
+	text-decoration: none;
+	margin-left: 1vw;
+	border-radius: 0;
+	font-weight: 700;
+	font-size: 1.2vw;
+	text-align: left;
+}
+
+.radioContainer {
+	width: 62%;
+	min-height: 4vh;
+	line-height: 4vh;
+	float: left;
+	position: relative;
+	padding-left: 1.1vw;
+	margin-bottom: 1vw;
+}
+
+.radioContainer:last-of-type {
+	margin-bottom: 0;
+}
+
+.radioContainer .inputLabel {
+	font-size: 1.2vw;
+	margin-left: 0.75vw;
+	color: #716b6f;
+	vertical-align: middle;
+}
+
+
+.radioContainer input[type="radio"], 
+.radioContainer input[type="checkbox"] {
+	width: 1.25vw; height: 1.25vw;
+	background: red;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.radioContainer .formExpBtn {
+	transform: scale(0.8, 0.8);
+	transform-origin: center;
+	position: absolute;
+	top: -0.4vw;
+	right: 0;
+	z-index: 2;
+}
+
+.radioContainer .formExpBtn .formExpDiv {
+	transform: scale(1.2);
+	transform-origin: bottom right;
+	width: 40vw;
+}
+
+
+.inputContainerSub {
+	margin-left: 0.75vw;
+	margin-bottom: 0.4vh;
+	display: none;
+}
+
+.inputContainerSub.inputContainerFullWidthHeading > span, .inputContainerSubHeading {
+	font-size: 1vw !important;
+	line-height: 2 !important;
+	margin-top: 0.4vw !important;
+}
+
+.inputContainerSub .radioContainer input[type="radio"], 
+.inputContainerSub .radioContainer input[type="checkbox"] {
+	width: 1vw; height: 1vw;
+}
+
+.inputContainerSub .radioContainer {
+	margin-bottom: 0;
+}
+
+.inputContainerSub .radioContainer .inputLabel {
+	margin-left: 0.5vw;
+	font-size: 1vw;
+}
+
+.inputContainerText {
+	font-size: 0.8vw;
+	line-height: 1.2;
+	width: 100%;
+	padding-left: 0;
+	margin-left: 0.5vw
+}
+
+.formFinish {
+	display: none;
+}
+
+
+
+
+
+#external_defense1-error, 
+#external_defense2-error, 
+#type_mobile_apk_defense-error, 
+#type_mobile_ipa_defense-error,
+#payment_other_text-error,
+#type_of_test-error,
+#payment-error,
+#type_of_environment-error,
+#access_other_text-error,
+#time_inbusinesshours_other-error,
+#time_outsidebusinesshours_other-error,
+#time_other_text-error,
+#type_of_access-error,
+#scope_targets_range-error,
+#scope_targets_number-error,
+#api_targets_number-error,
+#internal_network_host_number-error,
+#wireless_penetration_access_number-error,
+#standards_other_text-error
+ {
+	position: inherit;
+	float: left;
+	width: 100%;
+	line-height: 1;
+	margin-top: 0.5vw;
+}
+
+.fullWidth {
+	width: 100% !important;
+}
+.inputContainerConditional {
+	display: none;
+}
+
+/*Content*/
+
+
+
+
+
+
+
+
+footer .container {
+	padding: 100px 5%;
+}
+
+.marginT-05 {
+	margin-top: 0.5vw;
+}
+
+
+
+
+/*Mobile*/
+@media screen and (max-width: 1024px) {
+	header .container {
+		display: table;
+		width: 100%;
+		height: 100%;
+		/*max-width: 1500px;*/
+		margin: 0 auto;
+		position: relative;
+	}
+}
+
